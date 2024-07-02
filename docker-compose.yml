@@ -1,0 +1,16 @@
+version: '2'
+services:
+  nextchat:
+    restart: always
+    build:
+      context: .
+    ports:
+      - "80:80"
+    environment:
+      - OPENAI_API_KEY=$OPENAI_API_KEY
+      - GOOGLE_API_KEY=$GOOGLE_API_KEY
+      - BASE_URL=$BASE_URL
+      - DOMAIN=$DOMAIN
+      - APP_ID=$APP_ID
+      - APP_SECRET=$APP_SECRET
+
